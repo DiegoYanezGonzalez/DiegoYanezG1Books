@@ -3,8 +3,7 @@ package com.example.diegoyaezbooks
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
-import com.example.diegoyaezbooks.model.MyViewModel
-import com.example.diegoyaezbooks.view.ListingFragment
+import com.example.diegoyaezbooks.view.list.ListingFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initLog()
-        supportFragmentManager.beginTransaction().add(R.id.fragmentContainerView,ListingFragment()).commit()
+        supportFragmentManager.beginTransaction().add(R.id.fragmentContainerView, ListingFragment()).commit()
 
         //viewModel.DoSomrething()
 

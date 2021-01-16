@@ -8,10 +8,13 @@
 
     <TextView
         android:id="@+id/tvName"
-        android:layout_width="270dp"
-        android:layout_height="114dp"
-        android:textSize="15sp"
-        android:textAlignment="gravity"
+        android:layout_width="268dp"
+        android:layout_height="100dp"
+        android:shadowRadius="@android:integer/config_longAnimTime"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="30sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

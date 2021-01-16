@@ -1,5 +1,6 @@
-package com.example.diegoyaezbooks.model
+package com.example.diegoyaezbooks.model.remote
 
+import com.example.diegoyaezbooks.model.remote.BooksApi
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

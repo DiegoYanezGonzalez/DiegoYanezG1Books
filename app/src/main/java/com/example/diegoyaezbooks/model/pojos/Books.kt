@@ -1,4 +1,4 @@
-package com.example.diegoyaezbooks.model
+package com.example.diegoyaezbooks.model.pojos
 
 data class Books (val author: String,
                   val country: String,
@@ -6,3 +6,4 @@ data class Books (val author: String,
                   val imageLink: String,
                   val language: String,
                   val title: String )
+
