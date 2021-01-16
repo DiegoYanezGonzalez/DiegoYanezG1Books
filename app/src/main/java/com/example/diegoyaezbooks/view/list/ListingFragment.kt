@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.diegoyaezbooks.R
 import com.example.diegoyaezbooks.databinding.FragmentListingBinding
 import com.example.diegoyaezbooks.MyViewModel
+import com.example.diegoyaezbooks.view.BooksAadapter
 import com.example.diegoyaezbooks.view.detail.FragmentDetail
 
 class ListingFragment : Fragment() {

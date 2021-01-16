@@ -2,6 +2,7 @@ package com.example.diegoyaezbooks.model
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
+
 import com.example.diegoyaezbooks.model.pojos.Books
 import com.example.diegoyaezbooks.model.pojos.DetailBooks
 import com.example.diegoyaezbooks.model.remote.RetrofitClient
@@ -9,7 +10,6 @@ import com.example.diegoyaezbooks.model.remote.RetrofitClient
 class Repository{
 
     val book : MutableLiveData<List<Books>> = MutableLiveData()
-
     val bookDetail : MutableLiveData<DetailBooks> = MutableLiveData()
 
     suspend fun getBooksRepo() {

@@ -1,4 +1,4 @@
-package com.example.diegoyaezbooks.view.list
+package com.example.diegoyaezbooks.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,11 +9,8 @@ import com.example.diegoyaezbooks.databinding.BookListItemBinding
 import com.example.diegoyaezbooks.model.pojos.Books
 
 class BooksAadapter : RecyclerView.Adapter<BooksAadapter.BooksVH>() {
-
     private var booksList = listOf<Books>()
-
     private val selectedItem = MutableLiveData<Books>()
-
     fun selectedItem() : LiveData<Books> = selectedItem
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BooksVH {
