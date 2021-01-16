@@ -26,8 +26,6 @@ override fun onCreateView(
 
     vm.getDetail().observe(viewLifecycleOwner,{detail ->
         binding.tvTitleDetail.text= detail.title
-       // binding.tvAuthor.text=detail.author
-        //binding.tvCountryDetail.text=detail.country
 
         binding.floatingShare.setOnClickListener {
             val intent = Intent(Intent.ACTION_SEND)

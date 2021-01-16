@@ -36,7 +36,7 @@ class MyViewModel : ViewModel() {
         selected.value=books
 
         viewModelScope.launch {
-           repository.getBookDetails(books.title)
+           repository.getBookDetails(books.id)
         }
     }
 

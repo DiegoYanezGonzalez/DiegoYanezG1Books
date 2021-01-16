@@ -26,7 +26,7 @@ class Repository{
         }
     }
 
-    suspend fun getBookDetails(code:String){
+    suspend fun getBookDetails(code:Int){
         Log.d("DetailGet","Se muestran los datos de Detalles")
     val response = RetrofitClient.retrofitInstance().getBookDetail(code)
 

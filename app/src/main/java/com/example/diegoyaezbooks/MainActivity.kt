@@ -14,7 +14,6 @@ class MainActivity : AppCompatActivity() {
         initLog()
         supportFragmentManager.beginTransaction().add(R.id.fragmentContainerView, ListingFragment()).commit()
 
-        //viewModel.DoSomrething()
 
     }
     private fun initLog(){}
