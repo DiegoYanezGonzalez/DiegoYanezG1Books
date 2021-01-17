@@ -33,12 +33,7 @@ class ListingFragment : Fragment() {
 
         adapter.selectedItem().observe(viewLifecycleOwner, {
             Log.d("click","hicimos click en $it")
-
-
             vm.selected(it)
-
-
-
             activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.fragmentContainerView,FragmentDetail())?.addToBackStack("detail")?.commit()
         })
 
