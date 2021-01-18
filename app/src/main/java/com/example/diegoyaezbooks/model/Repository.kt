@@ -2,14 +2,16 @@ package com.example.diegoyaezbooks.model
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
-
-import com.example.diegoyaezbooks.model.pojos.Books
+import com.example.diegoyaezbooks.model.db.BookApplication
 import com.example.diegoyaezbooks.model.pojos.DetailBooks
 import com.example.diegoyaezbooks.model.remote.RetrofitClient
 
 class Repository{
 
-    val book : MutableLiveData<List<Books>> = MutableLiveData()
+    private val bookDataBaseRepo = BookApplication.bookDatabaseRoom!!
+
+    val booksRepo = bookDataBaseRepo.bookDao().getBooks()
+
     val bookDetail : MutableLiveData<DetailBooks> = MutableLiveData()
 
     suspend fun getBooksRepo() {
@@ -17,10 +19,12 @@ class Repository{
         val response = RetrofitClient.retrofitInstance().getBooks()
 
         if(response.isSuccessful) {
-            response.body()?.let {
-                Log.d("Books","tenemos ${it.size} paises")
-                book.value= it
+            response.body()?.let { list ->
+                val res = list.map {
+                mapperBookApiToData(it) }
+            bookDataBaseRepo.bookDao().insert(res)
             }
+
         } else {
             Log.d("Error","${response.errorBody()}")
         }

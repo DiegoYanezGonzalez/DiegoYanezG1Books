@@ -39,7 +39,7 @@ class BooksAadapter : RecyclerView.Adapter<BooksAadapter.BooksVH>() {
 
     class BooksVH(val binding : BookListItemBinding) : RecyclerView.ViewHolder(binding.root){
     fun bind(books: Books){
-        binding.tvName.text = books.title
+        binding.tvName.text = books.country
         }
     }
 }

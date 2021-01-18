@@ -37,7 +37,7 @@ class ListingFragment : Fragment() {
             activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.fragmentContainerView,FragmentDetail())?.addToBackStack("detail")?.commit()
         })
 
-        vm.books().observe(viewLifecycleOwner,{
+        vm.booksVM().observe(viewLifecycleOwner,{
             adapter.update(it)
         })
         return binding.root
