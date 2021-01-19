@@ -5,11 +5,8 @@ import android.view.ViewGroup
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.example.diegoyaezbooks.R
 import com.example.diegoyaezbooks.databinding.BookListItemBinding
 import com.example.diegoyaezbooks.model.pojos.Books
-import com.squareup.picasso.Picasso
 
 class BooksAadapter : RecyclerView.Adapter<BooksAadapter.BooksVH>() {
     private var booksList = listOf<Books>()
@@ -39,7 +36,8 @@ class BooksAadapter : RecyclerView.Adapter<BooksAadapter.BooksVH>() {
 
     class BooksVH(val binding : BookListItemBinding) : RecyclerView.ViewHolder(binding.root){
     fun bind(books: Books){
-        binding.tvName.text = books.country
+        binding.tvName.text = books.author
+        //binding.imageView.load(books.imageLink)
         }
     }
 }

@@ -9,16 +9,17 @@
 
     <TextView
         android:id="@+id/tvName"
-        android:layout_width="405dp"
-        android:layout_height="137dp"
+        android:layout_width="395dp"
+        android:layout_height="48dp"
         android:layout_marginStart="44dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="44dp"
         android:textAlignment="center"
         android:textColor="@color/design_default_color_error"
         android:textSize="30sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.658"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

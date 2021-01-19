@@ -3,7 +3,6 @@ package com.example.diegoyaezbooks.model.db
 import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.diegoyaezbooks.model.pojos.Books
 
 @Entity(tableName = "book")
 data class BooksEntity (val author: String, val country: String, @PrimaryKey val id: Int, val imageLink: String,

@@ -21,7 +21,7 @@ class MyViewModel : ViewModel() {
     fun getDetail() : LiveData<DetailBooks> = repository.bookDetail
 
     init {
-        Log.d("ViewModelDatos","cargando la información de los paises")
+        Log.d("ViewModelDatos","cargando la información de los li")
         viewModelScope.launch {
             repository.getBooksRepo()
         }
