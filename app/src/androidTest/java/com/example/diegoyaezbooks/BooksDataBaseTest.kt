@@ -56,6 +56,24 @@ class BooksDataBaseTest {
         }
     }
 
+    @Test
+    fun insertBook_1book() = runBlocking {
+        //Given
+        val bookList = listOf(BooksEntity("","",1,"","",""))
+
+        //  When
+        bookDao.insert(bookList)
+
+        //Then
+        bookDao.getBooks().observeForever {
+            assertThat(it).isNotNull()
+            assertThat(it).isNotEmpty()
+            assertThat(it).hasSize(1)
+
+        }
+
+    }
+
 
     @Test
     fun useAppContext() {
